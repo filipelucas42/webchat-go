@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161652863-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-161652863-1');
+    </script>
+    <title>WebChat in Go</title>
+</head>
+<body>
+    <nav>
+	<ul class="nav-wrapper">
+		<li><a href="/">Chat</a></li>
+		<li><a href="/public/about.html">About</a></li>
+		<li style="margin-left:auto;margin-right:40px;"><a href="https://blog.filipelucas.com" target="_blank">Blog</a></li>
+	</ul>
+    </nav>
+    <div style="max-width: 750px;margin:auto;">
+        <textarea id="board" disabled style="width:100%;height:60vh">
+
+        </textarea>
+        <form id="createUser" style="margin-top:5px">
+            <label>Enter a name:</label><br>
+            <input id="name">
+            <button id="createName">Create Name and Enter Chat</button>
+        </form>
+        <form id="chat" style="display:none">    
+            <input type="text" id="text">
+            <button id="button">Send Message</button>
+        </form>
+        <button id="closeConnection" style="display:none">Close Connection</button>
+        <p id="username"></p>
+    </div>
+
+    <script src="/public/js/websocket.js"></script>
+</body>
+</html>
