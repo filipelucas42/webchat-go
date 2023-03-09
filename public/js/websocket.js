@@ -32,7 +32,7 @@ document.getElementById("chat").addEventListener("submit", (event)=>{
 })
 createUser.addEventListener('submit', (e)=>{
     e.preventDefault()
-    socket = new WebSocket("ws://chat.filipelucas.com/socket")
+    socket = new WebSocket("ws://127.0.0.1:8082/socket")
 
     socket.onopen = function(e) {
         socket.send(document.getElementById("name").value)
